@@ -1,0 +1,14 @@
+
+1. Web tĩnh - web động
+2. Cấu trúc client - server
+3. Cài đặt môi trường
+    - B1: download xampp và tiến hành cài đặt: https://www.apachefriends.org/index.html
+    - B2: Start Apache và MySQL trong XAMPP control panel
+    - B3: gõ vào trình duyệt địa chỉ localhost
+    - B4: trong thư mục cài đặt xampp, tất cả các project đều được nằm ở thư mục htdocs
+
+    xampp -> htdocs
+    
+4. Cú pháp trong php
+5. Biến và khai báo biến trong php
+6. Làm thế nào để hiển thị ra html
