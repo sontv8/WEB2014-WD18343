@@ -62,13 +62,28 @@
             "id" => 1,
             "name" => "Product 1",
             "price" => 1000,
-            "quantity" => 500
+            "quantity" => 500,
+            "image" => "https://picsum.photos/200/300",
+            "description" => "Description 1",
+            "status" => true
         ],
         [
             "id" => 2,
             "name" => "Product 2",
             "price" => 2000,
-            "quantity" => 1000
+            "quantity" => 1000,
+            "image" => "https://picsum.photos/200/300",
+            "description" => "Description 2",
+            "status" => false
+        ],
+        [
+            "id" => 2,
+            "name" => "Product 2",
+            "price" => 2000,
+            "quantity" => 1000,
+            "image" => "https://picsum.photos/200/300",
+            "description" => "Description 3",
+            "status" => true
         ]
     ];
     foreach ($products as $key => $value) {
