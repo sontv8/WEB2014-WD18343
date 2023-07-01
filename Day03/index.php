@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
+
+
+
     <?php
     // array
     // $products = ["iphone", "samsung", "oppo", "xiaomi"];
@@ -77,8 +81,8 @@
             "status" => false
         ],
         [
-            "id" => 2,
-            "name" => "Product 2",
+            "id" => 3,
+            "name" => "Product 3",
             "price" => 2000,
             "quantity" => 1000,
             "image" => "https://picsum.photos/200/300",
@@ -86,9 +90,9 @@
             "status" => true
         ]
     ];
-    foreach ($products as $key => $value) {
-        echo "<h3>$value[name]</h3>";
-    }
+    // foreach ($products as $key => $value) {
+    //     echo "<h3>$value[name]</h3>";
+    // }
 
 
     ?>
@@ -99,6 +103,19 @@
         }
         ?>
     </ul> -->
+
+
+
+    <?php foreach ($products as $key => $value) : ?>
+        <div class="card" style="width: 18rem;">
+            <img src="<?php echo $value['image'] ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $value['name'] ?></h5>
+                <p class="card-text">Description 1</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    <?php endforeach ?>
 
     <script>
         const menuList = [{
