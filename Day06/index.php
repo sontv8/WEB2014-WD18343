@@ -9,16 +9,35 @@
 
 <body>
     <?php
-    echo "<pre>";
+    // echo "<pre>";
     // var_dump($_GET);
-    var_dump($_POST);
+    // var_dump($_POST);
+
+    $errors = [];
+    if (isset($_POST['btnSubmit'])) {
+        if (empty($_POST['name'])) {
+            $errors['name'] = "Vui lòng nhập tên sản phẩm";
+        }
+        if (empty($_POST['price'])) {
+            $errors['price'] = "Vui lòng nhập giá tiền";
+        }
+        // var_dump($errors);
+    }
+
+
 
     ?>
     <form action="" method="POST">
         <input type="text" placeholder="Enter product name" name="name">
+        <?php echo isset($errors['name']) ? $errors['name'] : "" ?>
         <input type="text" placeholder="Enter price name" name="price">
-        <button type="submit" value="submit">Submit</button>
+        <?php echo isset($errors['price']) ? $errors['price'] : "" ?>
+        <button type="submit" value="submit" name="btnSubmit">Submit</button>
     </form>
+    <div>
+        <h3>Tên sản phẩm: <?php echo isset($_POST['name']) ? $_POST['name'] : "" ?></h3>
+        <p>Giá sản phẩm: <?php echo isset($_POST['price']) ? $_POST['price'] : "" ?></p>
+    </div>
     <!-- 
         Request
         Response
