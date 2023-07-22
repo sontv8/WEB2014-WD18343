@@ -10,13 +10,22 @@
 <body>
     <?php
     $connection = new PDO("mysql:host=localhost;dbname=wd18343", "root", "");
-    $query = "SELECT * FROM users";
+    // $query = "SELECT * FROM users";
+    $query = "SELECT * FROM users WHERE id=2";
     $stmt = $connection->prepare($query);
     $stmt->execute();
     $users = $stmt->fetchAll();
     // echo "<pre>";
     // var_dump($users);
-
+    /*
+        table name: profile
+        id -> int , auto increment
+        account -> varchar 
+        image -> varchar
+        address -> varchar
+        company -> varchar
+        department -> varchar
+    */
     ?>
 
 
