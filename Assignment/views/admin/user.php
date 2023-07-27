@@ -14,7 +14,7 @@
     $query = "SELECT * FROM users";
     $users = getAll($query);
     ?>
-    <button class="bg-green-500 text-white px-4 rounded my-8 m-auto block">Add New User</button>
+    <a href="./add-user.php"><button class="bg-green-500 text-white px-4 rounded my-8 m-auto block">Add New User</button></a>
     <table class="border w-full">
         <thead>
             <tr class="border bg-orange-500 text-white">
@@ -32,7 +32,7 @@
                     <td class="border"><?php echo $value['email'] ?></td>
                     <td class="border">
                         <a href="../../controllers/delete-user.php?id=<?php echo $value['id'] ?>"><button class="bg-red-500 rounded px-4 ">Delete</button></a>
-                        <button class="bg-blue-700 text-white px-4 rounded">Update</button>
+                        <a href="./update-user.php?id=<?php echo $value['id'] ?>"><button class="bg-blue-700 text-white px-4 rounded">Update</button></a>
                     </td>
                 </tr>
             <?php endforeach ?>
